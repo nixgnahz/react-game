@@ -1,0 +1,215 @@
+.bottom {
+    background-color: white;
+}
+
+.bottom .title {
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 0px;
+    color: #999;
+}
+
+.bottom .line {
+    width: 4.8rem;
+    display: block;
+    border: 0.03rem solid #eae9ef;
+}
+
+.bottom .copyright {
+    font-size: 0.55rem;
+    padding: 0rem 0px 0.8rem;
+    text-align: center;
+    color: #999;
+}
+
+
+.list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5rem;
+    border-bottom: 0.05rem solid #f5f5fa;
+}
+
+.list-item img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+    margin: 0px 0.5rem;
+}
+
+.flex-column .name {
+    font-size: 0.6rem;
+    color: #333;
+    margin-bottom: 0.2rem;
+}
+
+.flex-column .desc {
+    font-size: 0.5rem;
+    color: #999;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.start-btn {
+    font-size: 0.4rem;
+    position: absolute;
+    right: 0.5rem;
+    color: #1381f1;
+    border: 0.05rem solid #1381f1;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    padding: 0.1rem 0.3rem;
+}
+
+.activity-item {
+    width: 90%;
+    padding: 0.5rem 5%;
+    border-bottom: 0.25rem solid #eae9ef;
+}
+
+.activity-item img {
+    width: 100%;
+}
+
+.activity-item .row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.activity-item .column {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+.activity-item .column .detail {
+    color: #333;
+    font-size: 0.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin-left: -0.4rem;
+}
+
+.activity-item .column .time {
+    font-size: 0.45rem;
+    color: #999;
+    margin: 0.15rem 0px;
+}
+
+.activity-item .status {
+    position: absolute;
+    right: 0px;
+    font-size: 0.55rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.15rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.activity-item .status.ing {
+    background-color: #ff524e;
+}
+
+.activity-item .status.over {
+    background-color: #cacaca;
+}
+
+.activity-item .status img {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.3rem;
+}
+
+.label {
+    display: inline-block;
+    width: 1.5rem;
+    font-size: 0.5rem;
+    line-height: 0.8rem;
+    text-align: center;
+    height: 0.8rem;
+    border-radius: 0.1rem;
+    margin: 0px 0.1rem;
+    transform: scale(0.85);
+}
+
+.blue {
+    color: #79bcf7;
+    border: 1px solid #79bcf7;
+}
+
+.red {
+    color: #f0a49f;
+    border: 1px solid #f0a49f;
+}
+
+.mask {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.tips {
+    width: 84%;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: white;
+    text-align: center;
+}
+
+.tips .title {
+    font-size: 0.7rem;
+    margin: 1rem 0px;
+}
+
+.tips .tip {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.tips .btn-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1rem;
+    border-top: 0.05rem solid #d5d5d5;
+}
+
+.tips .btn-box span {
+    flex: 1;
+    color: #00A3FF;
+    padding: 0.5rem 0px;
+    font-size: 0.7rem;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+}
+
+.tips .btn-box span:first-child {
+    border-right: 0.05rem solid #d5d5d5;
+}
