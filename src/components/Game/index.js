@@ -9,6 +9,9 @@ import NavBar from './NavBar'
 class Game extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            match: props.match.url
+        }
     }
 
     render () {
@@ -16,7 +19,7 @@ class Game extends React.Component {
             <div>
                 <Slider/>
                 <Current/>
-                <NavBar/>
+                <NavBar value={this.state.match}/>
             </div>
         )
     }

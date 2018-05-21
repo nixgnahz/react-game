@@ -45,7 +45,7 @@ class Slider extends React.Component {
                     { 
                         this.state.items.map((item)=>
                             <div className="swiper-slide" key={item.id}>
-                                <a href={item.href}><img src={item.img} /></a> 
+                                <a href={item.href}><img src={item.img} alt="暂时无法加载"/></a> 
                             </div>  
                         )
                      }

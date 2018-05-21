@@ -20,7 +20,7 @@ class ActivityItem extends React.Component {
                         <p className="time">{this.state.detail.time}</p>
                     </div>
                     <p className={this.state.detail.status ? 'status ing' : 'status over'}>
-                        <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/3/2/a/4/5a55ca26199a4.png"/>
+                        <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/3/2/a/4/5a55ca26199a4.png" alt="暂时无法加载"/>
                         <span>{this.state.detail.status ? '进行中' : '已结束'}</span>
                     </p>
                 </div>

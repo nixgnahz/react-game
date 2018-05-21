@@ -30,6 +30,10 @@ const tabBar = [
 
 const routes = [
     {
+        path: "/",
+        component: Game
+    },
+    {
         path: "/game",
         component: Game
     },
@@ -75,7 +79,7 @@ class TabBar extends React.Component {
                             tabBar.map((route, index)=>
                                 <li key={route.path} onClick={this.changeTabBar} data-index={index}>
                                     <Link to={route.path} className={this.state.currentIndex == index ? 'active': ''}>
-                                        <img src={this.state.currentIndex == index ? route.activeIcon : route.icon} className="icon" alt={route.name}/>
+                                        <img src={this.state.currentIndex == index ? route.activeIcon : route.icon} className="icon" alt="暂时无法加载"/>
                                         <span>{route.name}</span>
                                     </Link>
                                 </li>

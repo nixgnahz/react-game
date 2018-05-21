@@ -8,21 +8,21 @@ import OldService from './Service/Old'
 const navBar = [
     {
         name: "已开新服",
-        path: "/game/wlk"
+        path: ""
     },
     {
         name: "新服预告",
-        path: "/game/wlk/newService"
+        path: "/newService"
     }
 ]
 
 const routes = [
     {
-        path: "/game/wlk",
+        path: "",
         component: OldService
     },
     {
-        path: "/game/wlk/newService",
+        path: "/newService",
         component: NewService
     }
 ]
@@ -30,6 +30,9 @@ const routes = [
 class Newwlk extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            match: props.match.url
+        }
     }
 
     render () {
@@ -40,14 +43,14 @@ class Newwlk extends React.Component {
                         {
                             navBar.map((route, index)=>
                                 <li key={index}>
-                                    <NavLink exact to={route.path} className="menu" activeClassName="active">{route.name}</NavLink>
+                                    <NavLink exact to={this.state.match + route.path} className="menu" activeClassName="active">{route.name}</NavLink>
                                 </li>
                             )
                         }
                     </ul>
                     {
                         routes.map((route)=>
-                            <Route key={route.path} exact path={route.path} component={route.component} />
+                            <Route key={route.path} exact path={this.state.match + route.path} component={route.component} />
                         )
                     }
                 </div>

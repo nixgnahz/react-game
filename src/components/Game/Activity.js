@@ -11,29 +11,29 @@ import Notice from './Activity/Notice'
 const navBar = [
     {
         name: "活动",
-        path: "/game/activity"
+        path: ""
     },
     {
         name: "有奖",
-        path: "/game/activity/prize"
+        path: "/prize"
     },
     {
         name: "公告",
-        path: "/game/activity/notice"
+        path: "/notice"
     }
 ]
 
 const routes = [
     {
-        path: "/game/activity",
+        path: "",
         component: ActivityComponent
     },
     {
-        path: "/game/activity/prize",
+        path: "/prize",
         component: Prize
     },
     {
-        path: "/game/activity/notice",
+        path: "/notice",
         component: Notice
     }
 ]
@@ -41,6 +41,9 @@ const routes = [
 class Activity extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            match: props.match.url
+        }
     }
 
     render () {
@@ -51,14 +54,14 @@ class Activity extends React.Component {
                         {
                             navBar.map((item, index)=>
                                 <li key={index}>
-                                    <NavLink exact key={index} to={item.path} activeClassName="active">{item.name}</NavLink>
+                                    <NavLink exact key={index} to={this.state.match + item.path} activeClassName="active">{item.name}</NavLink>
                                 </li>
                             )
                         }
                     </ul>
                     {
                         routes.map((route)=>
-                            <Route key={route.path} exact path={route.path} component={route.component} />
+                            <Route key={route.path} exact path={this.state.match + route.path} component={route.component} />
                         )
                     }
                 </div>

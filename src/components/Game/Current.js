@@ -38,11 +38,11 @@ class Current extends React.Component {
             <div className="current-play">
                 <ul>
                     <li className="current-list">
-                        <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/c/e/f/6/5afe6ced404fc.png" className="icon"/>
+                        <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/c/e/f/6/5afe6ced404fc.png" className="icon" alt="暂时无法加载"/>
                     </li>
                     {current_arr.map((item)=>
                         <li className="current-list" key={item.id}>
-                            <img src={item.cover} className="current-cover"/>
+                            <img src={item.cover} className="current-cover" alt="暂时无法加载"/>
                             <p className="title">{item.title}</p>
                             <p className="click-btn">开始</p>
                         </li>

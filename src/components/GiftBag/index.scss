@@ -82,16 +82,16 @@
       display: flex;
       flex-direction: column;
       max-width: 80%;
-    }
-    p {
-      &:first-child {
-        font-size: 0.6rem;
-        color: #333;
-        margin: 0.25rem 0px;
-      }
-      &:last-child {
-        font-size: 0.35rem;
-        color: #bbb;
+      p {
+        &:first-child {
+          font-size: 0.6rem;
+          color: #333;
+          margin: 0.25rem 0px;
+        }
+        &:last-child {
+          font-size: 0.35rem;
+          color: #bbb;
+        }
       }
     }
     .receive-btn {

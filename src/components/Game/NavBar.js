@@ -10,37 +10,37 @@ import Newwlk from './Newwlk'
 const navBar = [
     {
         name: "热门",
-        path: "/game"
+        path: ""
     },
     {
         name: "新上架",
-        path: "/game/ground"
+        path: "/ground"
     },
     {
         name: "活动",
-        path: "/game/activity"
+        path: "/activity"
     },
     {
         name: "新开服",
-        path: "/game/wlk"
+        path: "/wlk"
     }
 ]
 
 const routes = [
     {
-        path: "/game",
+        path: "",
         component: Hot
     },
     {
-        path: "/game/ground",
+        path: "/ground",
         component: NewGround
     },
     {
-        path: "/game/activity",
+        path: "/activity",
         component: Activity
     },
     {
-        path: "/game/wlk",
+        path: "/wlk",
         component: Newwlk
     }
 ]
@@ -51,7 +51,8 @@ class NavBar extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            currentIndex: 0
+            currentIndex: 0,
+            match: props.value
         }
         this.changeNavBar = this.changeNavBar.bind(this);
     }
@@ -71,14 +72,14 @@ class NavBar extends React.Component {
                         {
                             navBar.map((route, index)=>
                                 <li className={this.state.currentIndex == index ? 'active' : ''} key={route.path} onClick={this.changeNavBar} data-index={index}>
-                                    <Link to={route.path}>{route.name}</Link>
+                                    <Link to={this.state.match + route.path}>{route.name}</Link>
                             </li>
                             )
                         }
                     </ul>
                     {
                         routes.map((route)=>
-                            <Route key={route.path} exact path={route.path} component={route.component} />
+                            <Route key={route.path} exact path={this.state.match + route.path} component={route.component} />
                         )
                     }
                 </div>

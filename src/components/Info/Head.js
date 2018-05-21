@@ -13,7 +13,7 @@ class Head extends React.Component {
     render () {
         return (
             <div className="info-head">
-                <img className="img" src={this.state.portrait} alt="头像"/>
+                <img className="img" src={this.state.portrait} alt="暂时无法加载"/>
                 <div className="flex-bottom">
                     <p className="name">{this.state.username}</p>
                     <p className="uid">UID : {this.state.userId}</p>
