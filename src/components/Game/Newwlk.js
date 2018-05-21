@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom";
 
 import NewService from './Service/New'
 import OldService from './Service/Old'
@@ -30,17 +30,6 @@ const routes = [
 class Newwlk extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            currentIndex: 0
-        }
-        this.changeNavBar = this.changeNavBar.bind(this);
-    }
-
-    changeNavBar (e) {
-        var index = e.currentTarget.getAttribute("data-index");
-        this.setState({
-            currentIndex: index
-        })
     }
 
     render () {
@@ -50,8 +39,8 @@ class Newwlk extends React.Component {
                     <ul className="menus">
                         {
                             navBar.map((route, index)=>
-                                <li className={this.state.currentIndex == index ? 'menu active' : 'menu'} key={route.path} onClick={this.changeNavBar} data-index={index}>
-                                    <Link to={route.path}>{route.name}</Link>
+                                <li key={index}>
+                                    <NavLink exact to={route.path} className="menu" activeClassName="active">{route.name}</NavLink>
                                 </li>
                             )
                         }

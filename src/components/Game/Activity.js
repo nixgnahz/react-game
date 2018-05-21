@@ -1,8 +1,8 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom";
 
-import './Activity/index.css'
+import './Activity/index.scss'
 
 import ActivityComponent from './Activity/Activity'
 import Prize from './Activity/Prize'
@@ -41,17 +41,6 @@ const routes = [
 class Activity extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            currentIndex: 0
-        }
-        this.changeNavBar = this.changeNavBar.bind(this);
-    }
-
-    changeNavBar (e) {
-        var index = e.currentTarget.getAttribute("data-index");
-        this.setState({
-            currentIndex: index
-        })
     }
 
     render () {
@@ -60,9 +49,9 @@ class Activity extends React.Component {
                 <div className="white-bg">
                     <ul className="nav">
                         {
-                            navBar.map((route, index)=>
-                                <li className={this.state.currentIndex == index ? 'active' : 'inactive'} key={route.path} onClick={this.changeNavBar} data-index={index}>
-                                    <Link to={route.path}>{route.name}</Link>
+                            navBar.map((item, index)=>
+                                <li key={index}>
+                                    <NavLink exact key={index} to={item.path} activeClassName="active">{item.name}</NavLink>
                                 </li>
                             )
                         }

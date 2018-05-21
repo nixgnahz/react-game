@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from './Head'
 import Gift from './Gift'
-import './index.css'
+import './index.scss'
 
 const giftBags = [
     {

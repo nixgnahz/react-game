@@ -1,0 +1,56 @@
+.info-head {
+  padding: 0.7rem 0.5rem;
+  .img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .flex-bottom {
+    .name {
+      font-size: 0.7rem;
+      margin-bottom: 0.25rem;
+    }
+    .uid {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.list-items {
+  margin-bottom: 0.4rem;
+  .item {
+    background-color: white;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5rem 0px;
+    border-bottom: 0.05rem solid #f1f1f6;
+    position: relative;
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+  .icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0px 0.4rem 0px 0.6rem;
+  }
+  .enter-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    right: 0.5rem;
+  }
+}
+
+.logout-btn {
+  width: 90%;
+  margin: 1rem auto 0px;
+  background: #1381f1;
+  color: #fff;
+  text-align: center;
+  padding: 0.45rem 0;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  font-size: 0.65rem;
+}

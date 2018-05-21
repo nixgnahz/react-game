@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import './rem'
 
 import Router from './router/index'
-import './index.css'
+import './index.scss'
 
 ReactDOM.render(
     <Router/>,

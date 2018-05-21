@@ -1,0 +1,42 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #f5f5fa;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.info-head {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  .img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 0.05rem solid #e2e2e2;
+  }
+  .flex-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0.5rem;
+    .name {
+      color: #333;
+    }
+    .uid {
+      color: #666;
+    }
+  }
+}

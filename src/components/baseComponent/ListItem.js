@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './index.scss'
+
 import Label from './Label'
 
 class ListItem extends React.Component {

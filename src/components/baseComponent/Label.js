@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './index.scss'
+
 class Label extends React.Component {
     constructor(props) {
         super(props);

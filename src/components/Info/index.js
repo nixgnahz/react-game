@@ -2,7 +2,7 @@ import React from 'react';
 
 import Head from './Head'
 import Item from './Item'
-import './index.css'
+import './index.scss'
 
 const items = [
     {

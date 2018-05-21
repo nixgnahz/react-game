@@ -1,8 +1,9 @@
 import React from 'react'
 
-import './index.css'
+import './index.scss'
 
 import Slider from './Swiper'
+import Current from './Current'
 import NavBar from './NavBar'
 
 class Game extends React.Component {
@@ -14,6 +15,7 @@ class Game extends React.Component {
         return (
             <div>
                 <Slider/>
+                <Current/>
                 <NavBar/>
             </div>
         )
