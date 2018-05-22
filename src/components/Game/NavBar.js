@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Redirect, NavLink} from "react-router-dom";
 
 import Hot from './Hot'
 import Activity from './Activity'
@@ -10,7 +10,7 @@ import Newwlk from './Newwlk'
 const navBar = [
     {
         name: "热门",
-        path: ""
+        path: "/hot"
     },
     {
         name: "新上架",
@@ -26,42 +26,13 @@ const navBar = [
     }
 ]
 
-const routes = [
-    {
-        path: "",
-        component: Hot
-    },
-    {
-        path: "/ground",
-        component: NewGround
-    },
-    {
-        path: "/activity",
-        component: Activity
-    },
-    {
-        path: "/wlk",
-        component: Newwlk
-    }
-]
-
-
 class NavBar extends React.Component {
 
     constructor (props) {
         super(props);
         this.state = {
-            currentIndex: 0,
             match: props.value
         }
-        this.changeNavBar = this.changeNavBar.bind(this);
-    }
-
-    changeNavBar (e) {
-        var index = e.currentTarget.getAttribute("data-index");
-        this.setState({
-            currentIndex: index
-        })
     }
 
     render () {
@@ -71,17 +42,19 @@ class NavBar extends React.Component {
                     <ul className="navBar">
                         {
                             navBar.map((route, index)=>
-                                <li className={this.state.currentIndex == index ? 'active' : ''} key={route.path} onClick={this.changeNavBar} data-index={index}>
-                                    <Link to={this.state.match + route.path}>{route.name}</Link>
-                            </li>
+                                <li key={route.path}>
+                                    <NavLink to={this.state.match + route.path} activeClassName="active">{route.name}</NavLink>
+                                </li>
                             )
                         }
                     </ul>
-                    {
-                        routes.map((route)=>
-                            <Route key={route.path} exact path={this.state.match + route.path} component={route.component} />
-                        )
-                    }
+                    <Route exact path={this.state.match} render={() =>
+                        <Redirect to={this.state.match + '/hot'}/>
+                    }/>
+                    <Route path={this.state.match + '/hot'} component={Hot} />
+                    <Route path={this.state.match + '/ground'} component={NewGround} />
+                    <Route path={this.state.match + '/activity'} component={Activity} />
+                    <Route path={this.state.match + '/wlk'} component={Newwlk} />
                 </div>
             </Router>
         )

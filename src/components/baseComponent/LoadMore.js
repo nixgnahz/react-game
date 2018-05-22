@@ -3,10 +3,6 @@ import React from 'react'
 import './index.scss'
 
 class LoadMore extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render () {
         return (
             <div className="bottom">

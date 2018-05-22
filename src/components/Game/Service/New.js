@@ -36,10 +36,6 @@ const service_arr = [
 ]
 
 class NewService extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render () {
         return (
             <div>

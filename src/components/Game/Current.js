@@ -29,10 +29,6 @@ const current_arr = [
 ]
 
 class Current extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render () {
         return (
             <div className="current-play">

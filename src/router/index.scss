@@ -17,14 +17,39 @@
       flex-direction: column;
       font-size: 0.5rem;
       color: #666;
-    }
-    &.active {
-      color: #3aa3f4;
+      &.active {
+        color: #3aa3f4;
+      }
     }
     .icon {
       width: 1.2rem;
       height: 0.9rem;
+      background-size: cover;
       margin-bottom: 0.1rem;
+    }
+    &:nth-child(1) {
+      .icon {
+        background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/0/b/f/c/5afc0282a97c8.png);
+      }
+      .active .icon {
+        background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/1/d/4/e/5afc025dbfbc0.png);
+      }
+    }
+    &:nth-child(2) {
+      .icon {
+        background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/8/2/4/c/5afc02896fd97.png);
+      }
+      .active .icon {
+        background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/5/4/b/0/5afc026bcfe60.png);
+      }
+    }
+    &:nth-child(3) {
+      .icon {
+        background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/c/1/b/c/5afc02910ccf6.png);
+      }
+      .active .icon {
+        background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/2/d/f/7/5afc027a2dd7e.png);
+      }
     }
   }
 }

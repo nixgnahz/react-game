@@ -12,20 +12,13 @@ class Head extends React.Component {
             signStatus: 0,
             showSign: 0
         }
-        this.showSign = this.showSign.bind(this);
-    }
-
-    showSign () {
-        this.setState((prevState) => ({
-            showSign: !prevState.showSign
-        }))
     }
 
     render () {
         if(this.state.signStatus) {
             var signComponent = <p className="sign-box sign-over">已签到</p>;
         } else{
-            var signComponent = <p className="sign-box sign-ing" onClick={this.showSign}>签到<span className="sign-tip"></span></p>;
+            var signComponent = <p className="sign-box sign-ing">签到<span className="sign-tip"></span></p>;
         }
         if(this.state.showSign) {
             var showComponent = <TipMask value={{tip: "签到需要登录后才能继续", cancel: "关闭", sure: "现在就去"}}/>

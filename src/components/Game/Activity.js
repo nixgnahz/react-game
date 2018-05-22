@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom";
+import {BrowserRouter as Router, Route, NavLink, Redirect} from "react-router-dom";
 
 import './Activity/index.scss'
 
@@ -11,7 +11,7 @@ import Notice from './Activity/Notice'
 const navBar = [
     {
         name: "活动",
-        path: ""
+        path: "/activities"
     },
     {
         name: "有奖",
@@ -20,21 +20,6 @@ const navBar = [
     {
         name: "公告",
         path: "/notice"
-    }
-]
-
-const routes = [
-    {
-        path: "",
-        component: ActivityComponent
-    },
-    {
-        path: "/prize",
-        component: Prize
-    },
-    {
-        path: "/notice",
-        component: Notice
     }
 ]
 
@@ -54,16 +39,17 @@ class Activity extends React.Component {
                         {
                             navBar.map((item, index)=>
                                 <li key={index}>
-                                    <NavLink exact key={index} to={this.state.match + item.path} activeClassName="active">{item.name}</NavLink>
+                                    <NavLink to={this.state.match + item.path} className="menu" activeClassName="active">{item.name}</NavLink>
                                 </li>
                             )
                         }
                     </ul>
-                    {
-                        routes.map((route)=>
-                            <Route key={route.path} exact path={this.state.match + route.path} component={route.component} />
-                        )
-                    }
+                    <Route exact path={this.state.match} render={() =>
+                        <Redirect to={this.state.match + '/activities'}/>
+                    }/>
+                    <Route path={this.state.match + '/activities'} component={ActivityComponent} />
+                    <Route path={this.state.match + '/prize'} component={Prize} />
+                    <Route path={this.state.match + '/notice'} component={Notice} />
                 </div>
             </Router>
         )
