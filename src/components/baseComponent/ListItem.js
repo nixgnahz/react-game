@@ -14,10 +14,9 @@ class ListItem extends React.Component {
     }
 
     render () {
+        var LabelComponent = null;
         if(this.state.detail.labels) {
-            var LabelComponent = this.state.detail.labels.map((item, index)=><Label key={index} value={item}/>)
-        } else{
-            var LabelComponent = null;
+            LabelComponent = this.state.detail.labels.map((item, index)=><Label key={index} value={item}/>)
         }
         return(
             <li className="list-item">

@@ -6,7 +6,7 @@ import 'swiper/dist/css/swiper.css'
 class Slider extends React.Component {
 
     componentDidMount() {
-        var swiper = new Swiper ('.swiper-container', {
+        new Swiper ('.swiper-container', {
             direction: 'horizontal',
             loop: true,
             pagination: {

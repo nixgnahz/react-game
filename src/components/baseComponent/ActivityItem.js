@@ -13,7 +13,7 @@ class ActivityItem extends React.Component {
     render () {
         return(
             <li className="activity-item">
-                <img src={this.state.detail.cover}/>
+                <img src={this.state.detail.cover} alt="暂时无法加载"/>
                 <div className="row">
                     <div className="column">
                         <p className="detail">{this.state.detail.desc}</p>
