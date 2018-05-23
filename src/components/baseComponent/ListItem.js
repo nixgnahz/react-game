@@ -20,7 +20,7 @@ class ListItem extends React.Component {
         }
         return(
             <li className="list-item">
-                <img src={this.state.detail.cover} alt="暂时无法加载"/>
+                <img src={this.state.detail.cover} alt=""/>
                 <div className="flex-column">
                     <p className="name">
                         {this.state.detail.name}

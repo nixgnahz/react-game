@@ -2,7 +2,7 @@ import React from 'react'
 
 import './index.scss'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 class TipMask extends React.Component {
     constructor(props) {

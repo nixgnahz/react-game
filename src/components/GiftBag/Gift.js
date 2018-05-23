@@ -21,7 +21,7 @@ class Gift extends React.Component {
         return (
             <div className="gift-detail-box">
                 <div className="head">
-                    <img src={this.state.detail.cover} alt="暂时无法加载"/>
+                    <img src={this.state.detail.cover} alt=""/>
                     <p>{this.state.detail.name}</p>
                 </div>
                 <div className="body">

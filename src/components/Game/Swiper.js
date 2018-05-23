@@ -26,7 +26,7 @@ class Slider extends React.Component {
                 },
                 {
                     id: 2,
-                    img: "https://game.11h5.com/static/images/2018/0515/20180515045355975.gif",
+                    img: "http://rs.aceclan.cn/uploads/e/exhzhh1526289964/5/a/b/0/5b02251b505ca.gif",
                     href: ""
                 }
             ]
@@ -41,7 +41,7 @@ class Slider extends React.Component {
                         this.state.items.map((item)=>
                             <div className="swiper-slide" key={item.id}>
                                 <a href={item.href}>
-                                    <img src={item.img} alt="暂时无法加载"/>
+                                    <img src={item.img} alt=""/>
                                 </a> 
                             </div>  
                         )

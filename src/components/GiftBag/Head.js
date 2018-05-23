@@ -1,6 +1,11 @@
 import React from 'react';
+import { createStore } from 'redux'
+
+import sign from '../../reducers/sign'
 
 import TipMask from '../baseComponent/TipMask'
+
+const store = createStore(sign)
 
 class Head extends React.Component {
     constructor(props) {
@@ -10,12 +15,12 @@ class Head extends React.Component {
             username: "xin",
             score: 10,
             signStatus: 0,
-            showSign: 0
+            showSign: store.getState()
         }
     }
 
     render () {
-        var signComponent = <p className="sign-box sign-ing">签到<span className="sign-tip"></span></p>;
+        var signComponent = <p className="sign-box sign-ing" onClick={() => store.dispatch({ type: 'changeSignStatus' })}>签到<span className="sign-tip"></span></p>;
         var showComponent = null;
         if(this.state.signStatus) {
             signComponent = <p className="sign-box sign-over">已签到</p>;
@@ -26,7 +31,7 @@ class Head extends React.Component {
         return (
             <div className="info-head">
                 {showComponent}
-                <img className="img" src={this.state.portrait} alt="暂时无法加载"/>
+                <img className="img" src={this.state.portrait} alt=""/>
                 <div className="flex-bottom">
                     <p className="name">{this.state.username}</p>
                     <p className="uid">{this.state.score}</p>
