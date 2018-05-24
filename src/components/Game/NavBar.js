@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, Redirect, NavLink} from "react-router-dom";
+import {Route, Redirect, NavLink} from "react-router-dom";
 
 import Hot from './Hot'
 import Activity from './Activity'
@@ -27,7 +27,6 @@ const navBar = [
 ]
 
 class NavBar extends React.Component {
-
     constructor (props) {
         super(props);
         this.state = {
@@ -37,26 +36,24 @@ class NavBar extends React.Component {
 
     render () {
         return (
-            <Router>
-                <div className="container">
-                    <ul className="navBar">
-                        {
-                            navBar.map((route, index)=>
-                                <li key={route.path}>
-                                    <NavLink to={this.state.match + route.path} activeClassName="active">{route.name}</NavLink>
-                                </li>
-                            )
-                        }
-                    </ul>
-                    <Route exact path={this.state.match} render={() =>
-                        <Redirect to={this.state.match + '/hot'}/>
-                    }/>
-                    <Route path={this.state.match + '/hot'} component={Hot} />
-                    <Route path={this.state.match + '/ground'} component={NewGround} />
-                    <Route path={this.state.match + '/activity'} component={Activity} />
-                    <Route path={this.state.match + '/wlk'} component={Newwlk} />
-                </div>
-            </Router>
+            <div className="container">
+                <ul className="navBar">
+                    {
+                        navBar.map((route, index)=>
+                            <li key={route.path}>
+                                <NavLink to={this.state.match + route.path} activeClassName="active">{route.name}</NavLink>
+                            </li>
+                        )
+                    }
+                </ul>
+                <Route exact path={this.state.match} render={() =>
+                    <Redirect to={this.state.match + '/hot'}/>
+                }/>
+                <Route path={this.state.match + '/hot'} component={Hot} />
+                <Route path={this.state.match + '/ground'} component={NewGround} />
+                <Route path={this.state.match + '/activity'} component={Activity} />
+                <Route path={this.state.match + '/wlk'} component={Newwlk} />
+            </div>
         )
     }
 }

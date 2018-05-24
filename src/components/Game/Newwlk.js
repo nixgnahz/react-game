@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, NavLink, Redirect} from "react-router-dom";
+import {Route, NavLink, Redirect} from "react-router-dom";
 
 import NewService from './Service/New'
 import OldService from './Service/Old'
@@ -26,24 +26,22 @@ class Newwlk extends React.Component {
 
     render () {
         return (
-            <Router>
-                <div>
-                    <ul className="menus">
-                        {
-                            navBar.map((route, index)=>
-                                <li key={index}>
-                                    <NavLink to={this.state.match + route.path} className="menu" activeClassName="active">{route.name}</NavLink>
-                                </li>
-                            )
-                        }
-                    </ul>
-                    <Route exact path={this.state.match} render={() =>
-                        <Redirect to={this.state.match + '/old'}/>
-                    }/>
-                    <Route path={this.state.match + '/old'} component={OldService} />
-                    <Route path={this.state.match + '/new'} component={NewService} />
-                </div>
-            </Router>
+            <div>
+                <ul className="menus">
+                    {
+                        navBar.map((route, index)=>
+                            <li key={index}>
+                                <NavLink to={this.state.match + route.path} className="menu" activeClassName="active">{route.name}</NavLink>
+                            </li>
+                        )
+                    }
+                </ul>
+                <Route exact path={this.state.match} render={() =>
+                    <Redirect to={this.state.match + '/old'}/>
+                }/>
+                <Route path={this.state.match + '/old'} component={OldService} />
+                <Route path={this.state.match + '/new'} component={NewService} />
+            </div>
         )
     }
 }

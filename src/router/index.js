@@ -6,6 +6,9 @@ import './index.scss'
 import Info from '../components/Info/index'
 import Game from '../components/Game/index'
 import GiftBag from '../components/GiftBag/index'
+import Detail from '../components/Detail/index'
+import View from '../components/View/index'
+import Bind from '../components/Bind/index'
 
 const tabBar = [
     {
@@ -38,6 +41,9 @@ class TabBar extends React.Component {
                     <Route path='/game' component={Game} />
                     <Route path='/giftbag' component={GiftBag} />
                     <Route path='/info' component={Info} />
+                    <Route path='/detail/:id' component={Detail} />
+                    <Route path='/view' component={View} />
+                    <Route path='/bind' component={Bind} />
                     <div className="tabBar-empty"></div>
                     <ul className="tabBar">
                         {

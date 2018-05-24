@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BrowserRouter as Router, Route, NavLink, Redirect} from "react-router-dom";
+import {Route, NavLink, Redirect} from "react-router-dom";
 
 import './Activity/index.scss'
 
@@ -33,25 +33,23 @@ class Activity extends React.Component {
 
     render () {
         return (
-            <Router>
-                <div className="white-bg">
-                    <ul className="nav">
-                        {
-                            navBar.map((item, index)=>
-                                <li key={index}>
-                                    <NavLink to={this.state.match + item.path} className="menu" activeClassName="active">{item.name}</NavLink>
-                                </li>
-                            )
-                        }
-                    </ul>
-                    <Route exact path={this.state.match} render={() =>
-                        <Redirect to={this.state.match + '/activities'}/>
-                    }/>
-                    <Route path={this.state.match + '/activities'} component={ActivityComponent} />
-                    <Route path={this.state.match + '/prize'} component={Prize} />
-                    <Route path={this.state.match + '/notice'} component={Notice} />
-                </div>
-            </Router>
+            <div className="white-bg">
+                <ul className="nav">
+                    {
+                        navBar.map((item, index)=>
+                            <li key={index}>
+                                <NavLink to={this.state.match + item.path} className="menu" activeClassName="active">{item.name}</NavLink>
+                            </li>
+                        )
+                    }
+                </ul>
+                <Route exact path={this.state.match} render={() =>
+                    <Redirect to={this.state.match + '/activities'}/>
+                }/>
+                <Route path={this.state.match + '/activities'} component={ActivityComponent} />
+                <Route path={this.state.match + '/prize'} component={Prize} />
+                <Route path={this.state.match + '/notice'} component={Notice} />
+            </div>
         )
     }
 }

@@ -1,0 +1,110 @@
+.head {
+  background-color: white;
+  a {
+    position: relative;
+    overflow: hidden;
+    .cover {
+      width: 100%;
+    }
+  }
+  .description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 0.5rem;
+    transform: rotateZ(0deg);
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0.15rem solid rgba(255,255,255,0.4);
+      border-radius: 0.5rem;
+    }
+    .name {
+      font-size: 0.75rem;
+      color: #333;
+      margin: 0.3rem 0px;
+    }
+    .desc {
+      font-size: 0.45rem;
+      color: #999;
+    }
+    .click-btn {
+      font-size: 0.4rem;
+      color: #fff;
+      background-color: #1381f1;
+      border: 0.05rem solid #1381f1;
+      border-radius: 0.2rem;
+      padding: 0.2rem 0.8rem;
+      margin: 0.5rem 0px;
+    }
+  }
+}
+
+.top-title {
+  font-size: 0.65rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  .line {
+    margin-right: 0.5rem;
+    display: inline-block;
+    height: 0.7rem;
+    border-left: 0.1rem solid #1381f1;
+  }
+}
+
+.boxes {
+  background-color: white;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  .text {
+    font-size: 0.45rem;
+    color: #999;
+    line-height: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  .hidden {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
+
+.gift {
+  border-bottom: 0.05rem solid #f1f1f6;
+  padding: 0.75rem 0px;
+  .title {
+    font-size: 0.6rem;
+    color: #333;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    .desc {
+      font-size: 0.55rem;
+      max-width: 80%;
+      margin: 0.35rem 0px 0px;
+      color: #999;
+    }
+  }
+}
+
+.info {
+  >p {
+    font-size: 0.55rem;
+    color: #888;
+    line-height: 0.9rem;
+    &:nth-child(2) {
+      margin-top: 0.4rem;
+    }
+  }
+}

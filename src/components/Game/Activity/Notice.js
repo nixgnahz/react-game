@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from "react-router-dom"
+
 import Label from '../../baseComponent/Label'
 
 const notice_arr = [
@@ -41,16 +43,23 @@ const notice_arr = [
 ]
 
 class Notice extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state  = {};
+    }
+
     render () {
         return (
             <ul>
                 {
                     notice_arr.map((item)=>
-                        <li className="notice-list" key={item.id}>
-                            <Label value={{text: "公告"}}/>
-                            <p className="title">{item.title}</p>
-                            <span className="time">{item.time}</span>
-                        </li>
+                        <Link to={{pathname: '/view', query: {id: item.id, type: "notice"}}} key={item.id}>
+                            <li className="notice-list">
+                                <Label value={{text: "公告"}}/>
+                                <p className="title">{item.title}</p>
+                                <span className="time">{item.time}</span>
+                            </li>
+                        </Link>
                     )
                 }
             </ul>

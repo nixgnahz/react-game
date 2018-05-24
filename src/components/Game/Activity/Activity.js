@@ -41,13 +41,18 @@ const activities = [
 ]
 
 class Activity extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state  = {};
+    }
+
     render () {
         return (
             <div>
                 <ul>
                     {
                         activities.map((item)=>
-                            <ActivityItem key={item.id} value={item}/>
+                            <ActivityItem value={item} key={item.id}/>
                         )
                     }
                 </ul>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import MoreBtn from './MoreBtn'
 import More from './More'
+import Label from '../baseComponent/Label'
 
 class Gift extends React.Component {
     constructor(props) {
@@ -18,6 +19,10 @@ class Gift extends React.Component {
         } else{
             moreComponent = this.state.detail.more.map((item)=><More key={item.desc} value={item}/>);
         }
+        var LabelComponent = null;
+        if(this.state.detail.labels) {
+            LabelComponent = this.state.detail.labels.map((item, index)=><Label key={index} value={item}/>)
+        }
         return (
             <div className="gift-detail-box">
                 <div className="head">
@@ -26,7 +31,7 @@ class Gift extends React.Component {
                 </div>
                 <div className="body">
                     <div className="left-desc">
-                        <p>{this.state.detail.desc}</p>
+                        <p>{LabelComponent}{this.state.detail.desc}</p>
                         <p>{this.state.detail.info}</p>
                     </div>
                     <p className="receive-btn">领取</p>

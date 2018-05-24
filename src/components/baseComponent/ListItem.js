@@ -2,6 +2,8 @@ import React from 'react'
 
 import './index.scss'
 
+import {Link} from "react-router-dom"
+
 import Label from './Label'
 
 class ListItem extends React.Component {
@@ -20,14 +22,16 @@ class ListItem extends React.Component {
         }
         return(
             <li className="list-item">
-                <img src={this.state.detail.cover} alt=""/>
-                <div className="flex-column">
-                    <p className="name">
-                        {this.state.detail.name}
-                        {LabelComponent}
-                    </p>
-                    <p className="desc">{this.state.detail.desc}</p>
-                </div>
+                <Link to={'/detail/' + this.state.detail.id}>
+                    <img src={this.state.detail.cover} alt=""/>
+                    <div className="flex-column">
+                        <p className="name">
+                            {this.state.detail.name}
+                            {LabelComponent}
+                        </p>
+                        <p className="desc">{this.state.detail.desc}</p>
+                    </div>
+                </Link>
                 <p className="start-btn">{this.state.btn}</p>
             </li>
         )

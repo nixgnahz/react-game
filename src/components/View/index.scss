@@ -1,0 +1,65 @@
+.view {
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  .view-body {
+    width: 100%;
+    .title {
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: bolder;
+      width: 90%;
+      margin: 1.5rem 5% 0.25rem;
+    }
+    .time {
+      font-size: 0.5rem;
+      text-align: center;
+      color: #999;
+    }
+    .text {
+      font-size: 0.65rem;
+      width: 90%;
+      margin: 1rem 5% 0.5rem;
+      p {
+        line-height: 1.2rem;
+        font-weight: normal;
+        &.bold {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  .view-empty {
+    height: 1.8rem;
+  }
+  .view-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    p {
+      flex: 1;
+      padding: 0.45rem 0px;
+      text-align: center;
+      font-size: 0.6rem;
+      &:first-child {
+        color: #1381f1;
+        border-top: 0.05rem solid #ededf0;
+        background-color: transparent;
+      }
+      &:last-child {
+        color: #fff;
+        background: #2697fd;
+        border-top: 0.05rem solid #2697fd;
+      }
+    }
+  }
+}
+
