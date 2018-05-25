@@ -3,12 +3,14 @@ import React from 'react'
 class Button extends React.Component {
     constructor(props) {
         super(props);
-        this.state  = {};
+        this.state  = {
+            btn: props.text
+        }
     }
 
     render () {
         return (
-            <div className="bind-btn">完成绑定</div>
+            <div className="bind-btn">{this.state.btn}</div>
         )
     }
 }

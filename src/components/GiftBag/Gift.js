@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import MoreBtn from './MoreBtn'
 import More from './More'

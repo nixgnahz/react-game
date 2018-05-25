@@ -1,5 +1,5 @@
-import React from "react";
-import {BrowserRouter as Router, Route, NavLink, Redirect} from "react-router-dom";
+import React from "react"
+import {BrowserRouter as Router, Route, NavLink, Redirect} from "react-router-dom"
 
 import './index.scss'
 
@@ -8,7 +8,9 @@ import Game from '../components/Game/index'
 import GiftBag from '../components/GiftBag/index'
 import Detail from '../components/Detail/index'
 import View from '../components/View/index'
-import Bind from '../components/Bind/index'
+import Bind from '../components/Input/Bind'
+import Authenticate from '../components/Input/Authenticate'
+import Rules from '../components/Rules/index'
 
 const tabBar = [
     {
@@ -44,6 +46,8 @@ class TabBar extends React.Component {
                     <Route path='/detail/:id' component={Detail} />
                     <Route path='/view' component={View} />
                     <Route path='/bind' component={Bind} />
+                    <Route path='/rules' component={Rules} />
+                    <Route path='/authenticate' component={Authenticate} />
                     <div className="tabBar-empty"></div>
                     <ul className="tabBar">
                         {

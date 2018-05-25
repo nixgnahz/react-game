@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Route, Redirect, NavLink} from "react-router-dom";
+import {Route, Redirect, NavLink} from "react-router-dom"
 
 import Hot from './Hot'
 import Activity from './Activity'

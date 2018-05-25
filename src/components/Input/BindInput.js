@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Input extends React.Component {
+class BindInput extends React.Component {
     constructor(props) {
         super(props);
         this.state  = {};
@@ -35,10 +35,9 @@ class Input extends React.Component {
                     <input type="number" placeholder="请输入短信验证码"/>
                     <span>获取验证码</span>
                 </div>
-                <p className="tip">绑定后，可使用手机登录，保障账号安全</p>
             </div>
         )
     }
 }
 
-export default Input
+export default BindInput

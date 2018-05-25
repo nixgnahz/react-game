@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
 
 import Head from './Head'
 import ItemEnter from './ItemEnter'
@@ -23,14 +23,20 @@ class Info extends React.Component {
                         <ItemText value='签到' text="已签到"/>
                     </div>
                     <div className="list-items">
-                        <ItemEnter value='实名认证' />
-                        <ItemEnter value='防沉迷系统说明' />
+                        <Link to='/authenticate'>
+                            <ItemEnter value='实名认证' />
+                        </Link>
+                        <Link to='/rules/addiction'>
+                            <ItemEnter value='防沉迷系统说明' />
+                        </Link>
                         <Link to='/bind'>
                             <ItemEnter value='绑定手机'/>
                         </Link>
                     </div>
                     <div className="list-items">
-                        <ItemEnter value='用户条例' />
+                        <Link to='/rules'>
+                            <ItemEnter value='用户条例' />
+                        </Link>
                     </div>
                 </div>
                 <p className="logout-btn">退出</p>

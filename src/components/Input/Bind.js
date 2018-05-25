@@ -3,7 +3,7 @@ import React from 'react'
 import './index.scss'
 
 import Head from './Head'
-import Input from './Input'
+import BindInput from './BindInput'
 import Button from './Button'
 
 class Bind extends React.Component {
@@ -16,8 +16,9 @@ class Bind extends React.Component {
         return (
             <div className="bind">
                 <Head/>
-                <Input/>
-                <Button/>
+                <BindInput/>
+                <p className="tip">绑定后，可使用手机登录，保障账号安全</p>
+                <Button text="完成绑定"/>
             </div>
         )
     }

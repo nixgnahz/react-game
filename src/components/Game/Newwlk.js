@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Route, NavLink, Redirect} from "react-router-dom";
+import {Route, NavLink, Redirect} from "react-router-dom"
 
 import NewService from './Service/New'
 import OldService from './Service/Old'

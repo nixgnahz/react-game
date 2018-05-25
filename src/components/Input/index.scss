@@ -61,11 +61,16 @@
         text-align: center;
       }
     }
-    .tip {
-      font-size: 0.55rem;
-      color: #999;
-      font-weight: 300;
-      margin: 0.5rem 0px 1.5rem;
+  }
+  .tip {
+    font-size: 0.55rem;
+    color: #999;
+    font-weight: 300;
+    width: 90%;
+    margin: 0.5rem auto 1.5rem;
+    text-align: left;
+    p {
+      margin: 0.25rem 0px;
     }
   }
   .bind-btn {
