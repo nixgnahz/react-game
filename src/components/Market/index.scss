@@ -29,6 +29,40 @@
       }
     }
   }
+  .mall {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      width: 40%;
+      margin: 0.5rem 5%;
+      img {
+        width: 100%;
+        max-width: 6rem;
+        border: 0.05rem solid #f6f5fb;
+      }
+      .title {
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 0.65rem;
+        font-weight: bold;
+        margin: 0.15rem 0px;
+      }
+      .desc {
+        font-size: 0.45rem;
+        color: #999;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: 300;
+      }
+    }
+  }
   .task {
     background-color: white;
     li {
