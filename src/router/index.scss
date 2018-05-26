@@ -45,6 +45,14 @@
     }
     &:nth-child(3) {
       .icon {
+        background-image: url(http://wx.wpart.cn/uploads/p/ppouwd1524119020/3/8/6/9/5b077e97cde71.png);
+      }
+      .active .icon {
+        background-image: url(http://wx.wpart.cn/uploads/p/ppouwd1524119020/0/f/1/1/5b077e9f40b87.png);
+      }
+    }
+    &:nth-child(4) {
+      .icon {
         background-image: url(http://wx.wpart.cn/uploads/A/AdqA4tKfayQrboHu9Ava/c/1/b/c/5afc02910ccf6.png);
       }
       .active .icon {

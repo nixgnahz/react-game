@@ -11,7 +11,7 @@ class ListItem extends React.Component {
         super(props);
         this.state = {
             detail: props.value,
-            btn: props.btn
+            btn: props.btn ? props.btn : "开始"
         }
     }
 
@@ -36,10 +36,6 @@ class ListItem extends React.Component {
             </li>
         )
     }
-}
-
-ListItem.defaultProps = {
-    btn: "开始"
 }
 
 export default ListItem

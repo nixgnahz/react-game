@@ -1,0 +1,157 @@
+.market {
+  .menu-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    li {
+      flex: 1;
+      width: 100%;
+      font-size: 0.65rem;
+      &:first-child a {
+        border: 0px;
+      }
+      a {
+        display: block;
+        width: 100%;
+        background-color: white;
+        height: 2rem;
+        text-align: center;
+        line-height: 2rem;
+        color: #666;
+        border-left: 0.05rem solid #f2f1f7;
+        font-weight: 300;
+        &.active {
+          background-color: #2697fd;
+          color: #fff;
+          border: 0px;
+        }
+      }
+    }
+  }
+  .task {
+    background-color: white;
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 0.75rem 0.5rem;
+      border-bottom: 0.05rem solid #f2f1f7;
+      position: relative;
+      .icon-box {
+        background-color: #2697fc;
+        border-radius: 50%;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.25rem;
+        img {
+          width: 1rem;
+          height: 1rem;
+          margin: 0.4rem;
+
+        }
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: 0.7rem;
+          color: #333;
+        }
+        .desc {
+          font-size: 0.5rem;
+          color: #999;
+        }
+      }
+      .btn {
+        position: absolute;
+        right: 0.75rem;
+        font-size: 0.55rem;
+        padding: 0.2rem 0rem;
+        width: 3rem;
+        text-align: center;
+        -webkit-border-radius: 0.15rem;
+        -moz-border-radius: 0.15rem;
+        border-radius: 0.15rem;
+        .red-circle {
+          position: absolute;
+          display: inline-block;
+          width: 0.3rem;
+          height: 0.3rem;
+          background-color: #ff524e;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          top: -0.1rem;
+          right: -0.1rem;
+        }
+      }
+      .finish-btn {
+        color: #999;
+        border: 0.05rem solid #999;
+      }
+      .unfinish-btn {
+        color: #2697fd;
+        border: 0.05rem solid #2697fd;
+      }
+    }
+  }
+  .record {
+    background-color: white;
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      border-bottom: .05rem solid #f2f1f7;
+      padding: 0.35rem 0px 0.55rem;
+      margin: 0rem 0.75rem;
+      .column {
+        display: flex;
+        flex-direction: column;
+        .time {
+          font-size: 0.45rem;
+          color: #999;
+        }
+        .title {
+          font-size: 0.65rem;
+          color: #333;
+          margin-top: 0.1rem;
+        }
+      }
+      .score-record {
+        position: absolute;
+        right: 0.5rem;
+        font-size: 0.5rem;
+      }
+      .add {
+        color: #15b300;
+      }
+      .minus {
+        color: #ff524e;
+      }
+    }
+  }
+  .rule {
+    background-color: white;
+    width: 90%;
+    padding: 0.25rem 5%;
+    >dl {
+      margin: 0.5rem 0px;
+      & {
+        dt {
+          font-size: 0.75rem;
+          color: #333;
+          margin: 0.25rem 0px;
+        }
+        dd {
+          font-weight: 400;
+          font-size: 0.65rem;
+          color: #999;
+          line-height: 1.1rem;
+        }
+      }
+    }
+  }
+}
+

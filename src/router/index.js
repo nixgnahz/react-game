@@ -6,6 +6,7 @@ import './index.scss'
 import Info from '../components/Info/index'
 import Game from '../components/Game/index'
 import GiftBag from '../components/GiftBag/index'
+import Market from '../components/Market/index'
 import Detail from '../components/Detail/index'
 import View from '../components/View/index'
 import Bind from '../components/Input/Bind'
@@ -20,6 +21,10 @@ const tabBar = [
     {
         name: "礼包",
         path: "/giftbag"
+    },
+    {
+        name: "商城",
+        path: "/market"
     },
     {
         name: "个人",
@@ -43,6 +48,7 @@ class TabBar extends React.Component {
                     <Route path='/game' component={Game} />
                     <Route path='/giftbag' component={GiftBag} />
                     <Route path='/info' component={Info} />
+                    <Route path='/market' component={Market} />
                     <Route path='/detail/:id' component={Detail} />
                     <Route path='/view' component={View} />
                     <Route path='/bind' component={Bind} />

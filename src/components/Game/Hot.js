@@ -75,7 +75,9 @@ const hot_arr= [
 class Hot extends React.Component {
     constructor(props) {
         super(props);
-        this.state  = {};
+        this.state  = {
+            copyright_flag: true
+        }
     }
 
     render () {
@@ -88,7 +90,7 @@ class Hot extends React.Component {
                         )
                     }
                 </ul>
-                <NoMore/>
+                <NoMore showCopyright={this.state.copyright_flag}/>
             </div>
         )
     }

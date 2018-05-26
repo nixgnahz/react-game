@@ -3,7 +3,7 @@ import { createStore } from 'redux'
 
 import sign from '../../reducers/sign'
 
-import TipMask from '../baseComponent/TipMask'
+import TipMask from './TipMask'
 
 const store = createStore(sign)
 

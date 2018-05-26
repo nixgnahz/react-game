@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Head from './Head'
+import Head from '../baseComponent/Head'
 import Gift from './Gift'
 import './index.scss'
 
