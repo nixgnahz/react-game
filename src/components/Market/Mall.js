@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.css'
+
 const goods = [
     {
         id: 1,
@@ -59,27 +62,61 @@ const goods = [
     }
 ]
 
+const notice = [
+    {
+        id: 1,
+        title: "[飞鱼]",
+        desc: "兑换了 传奇来了传奇礼包"
+    },
+    {
+        id: 2,
+        title: "[芦葫糖爆酱]",
+        desc: "兑换了 大天使之剑H5霸者礼包"
+    },
+    {
+        id: 3,
+        title: "[Don]",
+        desc: "兑换了 传奇来了王者礼包"
+    },
+    {
+        id: 4,
+        title: "[Silence]",
+        desc: "兑换了 凡人飞仙传钻石礼包"
+    }
+]
+
 class Mall extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
+    componentDidMount() {
+        new Swiper ('.swiper-container', {
+            direction: 'vertical',
+            autoplay: true,
+            loop: true
+        })
+    }
+
     render () {
         return (
             <div className="mall">
-                {
-                    goods.map((item)=>
-                        <GoodsItem key={item.id} value={item}/>
-                    )
-                }
+                <NoticeSwiper value={notice}/>
+                <ul>
+                    {
+                        goods.map((item)=>
+                            <GoodsItem key={item.id} value={item}/>
+                        )
+                    }
+                </ul>
             </div>
         )
     }
 }
 
 function GoodsItem(props) {
-    var goods = props.value;
+    var goods = props.value
     return (
         <li>
             <img src={goods.cover} alt=""/>
@@ -89,6 +126,25 @@ function GoodsItem(props) {
                 <p>剩余：{goods.storage}</p>
             </div>
         </li>
+    )
+}
+
+function NoticeSwiper(props) {
+    var items = props.value
+    return (
+        <div className="swiper-container">
+            <div className="swiper-wrapper">
+                {
+                    notice.map((item)=>
+                        <div className="swiper-slide" key={item.id}>
+                            <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/7/9/5/e/5b0b67e102e48.png" alt=""/>
+                            <span className="name">{item.title}</span>
+                            <span className="desc">{item.desc}</span>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
     )
 }
 
