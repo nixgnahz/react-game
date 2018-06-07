@@ -1,4 +1,4 @@
-export default (state = 0, action) => {
+export default (state = false, action) => {
     if(action.type === "changeSignStatus") {
         return !state
     } else{

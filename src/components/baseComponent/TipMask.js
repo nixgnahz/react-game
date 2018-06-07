@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 class TipMask extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             tips: props.value
         }
@@ -19,7 +19,7 @@ class TipMask extends React.Component {
                     <p className="title">提示信息</p>
                     <p className="tip">{this.state.tips.tip}</p>
                     <div className="btn-box">
-                        <span>{this.state.tips.cancel}</span>
+                        <span onClick={this.props.onChange}>{this.state.tips.cancel}</span>
                         <span>{this.state.tips.sure}</span>
                     </div>
                 </div>

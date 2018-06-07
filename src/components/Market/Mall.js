@@ -130,7 +130,6 @@ function GoodsItem(props) {
 }
 
 function NoticeSwiper(props) {
-    var items = props.value
     return (
         <div className="swiper-container">
             <div className="swiper-wrapper">
