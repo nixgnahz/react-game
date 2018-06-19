@@ -21,11 +21,6 @@ class Head extends React.Component {
     }
 
     render () {
-        store.subscribe(() =>
-            this.setState({
-                showSign: store.getState()
-            })
-        )
         var signComponent = <p className="sign-box sign-ing" onClick={() =>store.dispatch({ type: 'changeSignStatus' })}>签到<span className="sign-tip"></span></p>;
         var showComponent = null;
         if(this.state.signStatus) {
