@@ -2,12 +2,6 @@ import React from 'react'
 
 import TipMask from './TipMask'
 
-import { createStore } from 'redux'
-
-import sign from '../../reducers/sign'
-
-const store = createStore(sign)
-
 class Head extends React.Component {
     constructor(props) {
         super(props)
@@ -16,18 +10,22 @@ class Head extends React.Component {
             username: "xin",
             score: 10,
             signStatus: 0,
-            showSign: store.getState()
+            showSign: false
         }
     }
 
+    changeShowSign () {
+
+    }
+
     render () {
-        var signComponent = <p className="sign-box sign-ing" onClick={() =>store.dispatch({ type: 'changeSignStatus' })}>签到<span className="sign-tip"></span></p>;
+        var signComponent = <p className="sign-box sign-ing" onClick={this.changeShowSign}>签到<span className="sign-tip"></span></p>;
         var showComponent = null;
         if(this.state.signStatus) {
             signComponent = <p className="sign-box sign-over">已签到</p>;
         }
         if(this.state.showSign) {
-            showComponent = <TipMask value={{tip: "签到需要登录后才能继续", cancel: "关闭", sure: "现在就去"}} onChange={() =>store.dispatch({ type: 'changeSignStatus' })}/>
+            showComponent = <TipMask value={{tip: "签到需要登录后才能继续", cancel: "关闭", sure: "现在就去"}} onChange={this.changeShowSign}/>
         }
         return (
             <div className="info-head">
