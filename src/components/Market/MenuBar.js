@@ -31,32 +31,26 @@ const menus = [
 ]
 
 class MenuBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            match: props.value
-        }
-    }
-
     render () {
+        const match = this.props.value
         return (
             <div>
                 <ul className="menu-bar">
                     {
                         menus.map((route, index)=>
                             <li key={route.path}>
-                                <NavLink to={this.state.match + route.path} activeClassName="active">{route.name}</NavLink>
+                                <NavLink to={match + route.path} activeClassName="active">{route.name}</NavLink>
                             </li>
                         )
                     }
                 </ul>
-                <Route exact path={this.state.match} render={() =>
-                    <Redirect to={this.state.match + '/pointmall'}/>
+                <Route exact path={match} render={() =>
+                    <Redirect to={match + '/pointmall'}/>
                 }/>
-                <Route exact path={this.state.match + '/pointmall'} component={Mall}/>
-                <Route path={this.state.match + '/pointtask'} component={Task}/>
-                <Route path={this.state.match + '/pointrecord'} component={Record}/>
-                <Route path={this.state.match + '/pointrule'} component={Rule}/>
+                <Route exact path={match + '/pointmall'} component={Mall}/>
+                <Route path={match + '/pointtask'} component={Task}/>
+                <Route path={match + '/pointrecord'} component={Record}/>
+                <Route path={match + '/pointrule'} component={Rule}/>
             </div>
         )
     }

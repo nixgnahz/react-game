@@ -1,15 +1,13 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 class Button extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {};
-    }
-
     render () {
         return (
             <div className="view-bottom">
-                <p>返回列表</p>
+                <p>
+                    <Link to='/game'>返回列表</Link>
+                </p>
                 <p>进入游戏</p>
             </div>
         )

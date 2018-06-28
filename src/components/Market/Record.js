@@ -41,15 +41,8 @@ const records = [
 ]
 
 class Record extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            match: props.value,
-            copyright_flag: false
-        }
-    }
-
     render () {
+        const copyright_flag = false
         return (
             <ul className="record">
                 {
@@ -57,7 +50,7 @@ class Record extends React.Component {
                         <RecordItem key={item.id} value={item}/>
                     )
                 }
-                <NoMore showCopyright={this.state.copyright_flag}/>
+                <NoMore showCopyright={copyright_flag}/>
             </ul>
 
         )

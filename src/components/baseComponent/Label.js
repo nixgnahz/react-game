@@ -3,16 +3,10 @@ import React from 'react'
 import './index.scss'
 
 class Label extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            label: props.value
-        }
-    }
-
     render () {
+        const label = this.props.value
         return (
-            <span className={this.state.label.class ? this.state.label.class + ' label' : 'blue label'}>{this.state.label.text}</span>
+            <span className={label.class ? label.class + ' label' : 'blue label'}>{label.text}</span>
         )
     }
 }

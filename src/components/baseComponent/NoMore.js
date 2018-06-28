@@ -5,16 +5,10 @@ import PropTypes from 'prop-types'
 import './index.scss'
 
 class NoMore extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {
-            showCopyright: props.showCopyright
-        }
-    }
-
     render () {
+        const {showCopyright} = this.props
         var copyrightComponent = null
-        if(this.state.showCopyright) {
+        if(showCopyright) {
             copyrightComponent = <p className="copyright">Copyright©2014-2018 All Rights Reserved</p>
         }
         return (

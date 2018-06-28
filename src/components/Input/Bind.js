@@ -7,11 +7,6 @@ import BindInput from './BindInput'
 import Button from './Button'
 
 class Bind extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {};
-    }
-
     render () {
         return (
             <div className="bind">

@@ -8,11 +8,6 @@ import Gift from './Gift'
 import Info from './Info'
 
 class Detail extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {};
-    }
-
     render () {
         return (
             <div>

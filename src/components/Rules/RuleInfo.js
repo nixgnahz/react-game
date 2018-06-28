@@ -3,11 +3,6 @@ import React from 'react'
 import './index.scss'
 
 class RuleInfo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     render () {
         return (
             <div className="rule-detail">

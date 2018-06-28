@@ -2,22 +2,16 @@ import React from 'react'
 
 import './index.scss'
 
-import Head from '../baseComponent/Head'
+import Head from '../../containers/Sign'
 import MenuBar from './MenuBar'
 
 class Market extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            match: props.match.url
-        }
-    }
-
     render () {
+        const {url} = this.props.match
         return (
             <div className="market">
                 <Head/>
-                <MenuBar value={this.state.match}/>
+                <MenuBar value={url}/>
             </div>
         )
     }

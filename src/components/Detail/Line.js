@@ -1,18 +1,12 @@
 import React from  'react'
 
 class Line extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            text: props.value
-        }
-    }
-
     render () {
+        const text = this.props.value
         return (
             <div>
                 <p className="top-title">
-                    <span className="line"></span>{this.state.text}
+                    <span className="line"></span>{text}
                 </p>
             </div>
         )

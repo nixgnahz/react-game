@@ -5,22 +5,16 @@ import './index.scss'
 import PropTypes from 'prop-types'
 
 class TipMask extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            tips: props.value
-        }
-    }
-
     render () {
+        const tips = this.props.value
         return (
             <div className="mask">
                 <div className="tips">
                     <p className="title">提示信息</p>
-                    <p className="tip">{this.state.tips.tip}</p>
+                    <p className="tip">{tips.tip}</p>
                     <div className="btn-box">
-                        <span onClick={this.props.onChange}>{this.state.tips.cancel}</span>
-                        <span>{this.state.tips.sure}</span>
+                        <span onClick={this.props.onChange}>{tips.cancel}</span>
+                        <span>{tips.sure}</span>
                     </div>
                 </div>
             </div>

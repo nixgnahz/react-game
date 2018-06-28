@@ -86,11 +86,6 @@ const notice = [
 ]
 
 class Mall extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     componentDidMount() {
         new Swiper ('.swiper-container', {
             direction: 'vertical',

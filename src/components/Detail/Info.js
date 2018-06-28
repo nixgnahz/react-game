@@ -3,11 +3,6 @@ import React from  'react'
 import Line from './Line'
 
 class Info extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {};
-    }
-
     render () {
         return (
             <div className="boxes info">

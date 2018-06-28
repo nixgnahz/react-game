@@ -1,16 +1,10 @@
 import React from 'react'
 
 class Button extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {
-            btn: props.text
-        }
-    }
-
     render () {
+        const {text} = this.props
         return (
-            <div className="bind-btn">{this.state.btn}</div>
+            <div className="bind-btn">{text}</div>
         )
     }
 }

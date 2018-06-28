@@ -8,18 +8,12 @@ import RuleItem from './RuleItem'
 import RuleInfo from './RuleInfo'
 
 class Rules extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            match: props.match.url
-        }
-    }
-
     render () {
+        const {url} = this.props.match
         return (
             <div className="rules">
-                <Route exact path={this.state.match} component={RuleItem}/>
-                <Route path={this.state.match + '/:id'} component={RuleInfo} />
+                <Route exact path={url} component={RuleItem}/>
+                <Route path={url + '/:id'} component={RuleInfo} />
             </div>
         )
     }

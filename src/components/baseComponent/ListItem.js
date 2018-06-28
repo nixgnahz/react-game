@@ -7,32 +7,26 @@ import {Link} from "react-router-dom"
 import Label from './Label'
 
 class ListItem extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            detail: props.value,
-            btn: props.btn ? props.btn : "开始"
-        }
-    }
-
     render () {
+        const detail = this.props.value
+        const btn = this.props.btn ? this.props.btn : "开始"
         var LabelComponent = null;
-        if(this.state.detail.labels) {
-            LabelComponent = this.state.detail.labels.map((item, index)=><Label key={index} value={item}/>)
+        if(detail.labels) {
+            LabelComponent = detail.labels.map((item, index)=><Label key={index} value={item}/>)
         }
         return(
             <li className="list-item">
-                <Link to={'/detail/' + this.state.detail.id}>
-                    <img src={this.state.detail.cover} alt=""/>
+                <Link to={'/detail/' + detail.id}>
+                    <img src={detail.cover} alt=""/>
                     <div className="flex-column">
                         <p className="name">
-                            {this.state.detail.name}
+                            {detail.name}
                             {LabelComponent}
                         </p>
-                        <p className="desc">{this.state.detail.desc}</p>
+                        <p className="desc">{detail.desc}</p>
                     </div>
                 </Link>
-                <p className="start-btn">{this.state.btn}</p>
+                <p className="start-btn">{btn}</p>
             </li>
         )
     }

@@ -8,11 +8,6 @@ import ItemText from './ItemText'
 import './index.scss'
 
 class Info extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state  = {};
-    }
-
     render () {
         return (
             <div>

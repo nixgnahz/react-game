@@ -24,31 +24,25 @@ const navBar = [
 ]
 
 class Activity extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            match: props.match.url
-        }
-    }
-
     render () {
+        const {url} = this.props.match
         return (
             <div className="white-bg">
                 <ul className="nav">
                     {
                         navBar.map((item, index)=>
                             <li key={index}>
-                                <NavLink to={this.state.match + item.path} className="menu" activeClassName="active">{item.name}</NavLink>
+                                <NavLink to={url + item.path} className="menu" activeClassName="active">{item.name}</NavLink>
                             </li>
                         )
                     }
                 </ul>
-                <Route exact path={this.state.match} render={() =>
-                    <Redirect to={this.state.match + '/activities'}/>
+                <Route exact path={url} render={() =>
+                    <Redirect to={url + '/activities'}/>
                 }/>
-                <Route path={this.state.match + '/activities'} component={ActivityComponent} />
-                <Route path={this.state.match + '/prize'} component={Prize} />
-                <Route path={this.state.match + '/notice'} component={Notice} />
+                <Route path={url + '/activities'} component={ActivityComponent} />
+                <Route path={url + '/prize'} component={Prize} />
+                <Route path={url + '/notice'} component={Notice} />
             </div>
         )
     }

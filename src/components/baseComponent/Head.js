@@ -14,18 +14,15 @@ class Head extends React.Component {
         }
     }
 
-    changeShowSign () {
-
-    }
-
     render () {
-        var signComponent = <p className="sign-box sign-ing" onClick={this.changeShowSign}>签到<span className="sign-tip"></span></p>;
+        const {sign, changeSignStatus} = this.props
+        var signComponent = <p className="sign-box sign-ing" onClick={changeSignStatus}>签到<span className="sign-tip"></span></p>;
         var showComponent = null;
         if(this.state.signStatus) {
             signComponent = <p className="sign-box sign-over">已签到</p>;
         }
-        if(this.state.showSign) {
-            showComponent = <TipMask value={{tip: "签到需要登录后才能继续", cancel: "关闭", sure: "现在就去"}} onChange={this.changeShowSign}/>
+        if(sign) {
+            showComponent = <TipMask value={{tip: "签到需要登录后才能继续", cancel: "关闭", sure: "现在就去"}} onChange={changeSignStatus}/>
         }
         return (
             <div className="info-head">

@@ -5,7 +5,7 @@ import './index.scss'
 
 import Info from '../components/Info/index'
 import Game from '../components/Game/index'
-import GiftBag from '../components/GiftBag/index'
+import GiftBag from '../containers/GiftBag'
 import Market from '../components/Market/index'
 import Detail from '../components/Detail/index'
 import View from '../components/View/index'
@@ -33,11 +33,6 @@ const tabBar = [
 ]
 
 class TabBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     render () {
         return (
             <Router>

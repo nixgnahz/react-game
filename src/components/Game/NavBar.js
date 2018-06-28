@@ -27,32 +27,26 @@ const navBar = [
 ]
 
 class NavBar extends React.Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            match: props.value
-        }
-    }
-
     render () {
+        const match = this.props.value
         return (
             <div className="container">
                 <ul className="navBar">
                     {
                         navBar.map((route, index)=>
                             <li key={route.path}>
-                                <NavLink to={this.state.match + route.path} activeClassName="active">{route.name}</NavLink>
+                                <NavLink to={match + route.path} activeClassName="active">{route.name}</NavLink>
                             </li>
                         )
                     }
                 </ul>
-                <Route exact path={this.state.match} render={() =>
-                    <Redirect to={this.state.match + '/hot'}/>
+                <Route exact path={match} render={() =>
+                    <Redirect to={match + '/hot'}/>
                 }/>
-                <Route path={this.state.match + '/hot'} component={Hot} />
-                <Route path={this.state.match + '/ground'} component={NewGround} />
-                <Route path={this.state.match + '/activity'} component={Activity} />
-                <Route path={this.state.match + '/wlk'} component={Newwlk} />
+                <Route path={match + '/hot'} component={Hot} />
+                <Route path={match + '/ground'} component={NewGround} />
+                <Route path={match + '/activity'} component={Activity} />
+                <Route path={match + '/wlk'} component={Newwlk} />
             </div>
         )
     }
