@@ -6,7 +6,7 @@ class Footer extends React.Component {
       <div>
         <div className="pc-tip"></div>
         <div className="pc-scanBox">
-          <img src="http://wx.wpart.cn//uploads/app_qrimg_save/t.3357557.cn/6/d/d/e/6dde085391d466e19ae7345596255f65/img.png" alt=""/>
+          <img src="http://wx.wpart.cn/uploads/i/iS5eCyMAA8Kjel4iArxt/3/8/7/a/5b3c8e75bdb0c.jpeg" alt=""/>
           <p>微信扫码 在手机上玩</p>
         </div>
       </div>
