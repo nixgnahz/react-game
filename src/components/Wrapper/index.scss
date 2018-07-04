@@ -1,0 +1,105 @@
+.pc-container {
+  overflow: hidden;
+  background: #e0f4ff url(http://game.11h5.com/image/bg.jpg) center top no-repeat;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  .pc-topBar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.25rem;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 0.25rem;
+    }
+    span {
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+  }
+  .pc-wrapBox {
+    width: 350px;
+    height: 82%;
+    background: #fff;
+    padding: 6.5% 0.5rem 3%;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 0.05rem solid #2697fd;
+    -o-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    border-radius: 0.5rem;
+    .pc-wrap {
+      height: 100%;
+      background: #f5f5fa;
+      border: 0.05rem solid #2697fd;
+      overflow: hidden;
+      position: relative;
+    }
+    .pc-content {
+      overflow: scroll;
+      width: 100%;
+      height: 100%;
+    }
+    .pc-tip {
+      position: absolute;
+      bottom: 0rem;
+      left: -10.01rem;
+      width: 10.1rem;
+      height: 7.8rem;
+      background: url(http://game.11h5.com/image/tip.png) no-repeat;
+    }
+    .pc-scanBox {
+      position: absolute;
+      bottom: 6rem;
+      text-align: center;
+      color: #2697fd;
+      img {
+        width: 100%;
+        max-width: 5.5rem;
+        margin: auto;
+      }
+      p {
+        font-size: 0.6rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pc-topBar, .pc-tip, .pc-scanBox {
+    display: none;
+  }
+  .pc-wrapBox {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border: 0px;
+    background-color: white;
+  }
+  .pc-wrapBox .pc-wrap {
+    border: 0px;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 850px) {
+  .pc-topBar, .pc-tip, .pc-scanBox {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .pc-scanBox {
+    right: -9rem;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './rem'
-import Router from './router/index'
+import App from './components/App'
 import './index.scss'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
@@ -10,7 +10,7 @@ const store = createStore(reducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router/>
+    <App/>
   </Provider>,
   document.getElementById('root')
 )

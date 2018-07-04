@@ -8,11 +8,13 @@ import Button from './Button'
 class View extends React.Component {
     render () {
         return (
-            <div className="view">
+            <section className="view-section">
+              <div className="view">
                 <Body/>
                 <div className="view-empty"></div>
-                <Button/>
-            </div>
+              </div>
+              <Button/>
+            </section>
         )
     }
 }

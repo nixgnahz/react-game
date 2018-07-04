@@ -1,33 +1,42 @@
-.view {
-  position: fixed;
-  background-color: white;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  .view-body {
+section.view-section {
+  .view {
+    position: fixed;
     width: 100%;
-    .title {
-      font-size: 0.8rem;
-      text-align: center;
-      font-weight: bolder;
-      width: 90%;
-      margin: 1.5rem 5% 0.25rem;
+    height:100%;
+    overflow: scroll;
+    z-index: 1001;
+    background-color: #ffffff;
+    .pc-content & {
+      position: absolute;
+      width: 100%;
+      height:100%;
+      overflow: scroll;
+      z-index: 1001;
     }
-    .time {
-      font-size: 0.5rem;
-      text-align: center;
-      color: #999;
-    }
-    .text {
-      font-size: 0.65rem;
-      width: 90%;
-      margin: 1rem 5% 0.5rem;
-      p {
-        line-height: 1.2rem;
-        font-weight: normal;
-        &.bold {
-          font-weight: 900;
+    .view-body {
+      width: 100%;
+      .title {
+        font-size: 0.8rem;
+        text-align: center;
+        font-weight: bolder;
+        width: 90%;
+        margin: 1.5rem 5% 0.25rem;
+      }
+      .time {
+        font-size: 0.5rem;
+        text-align: center;
+        color: #999;
+      }
+      .text {
+        font-size: 0.65rem;
+        width: 90%;
+        margin: 1rem 5% 0.5rem;
+        p {
+          line-height: 1.2rem;
+          font-weight: normal;
+          &.bold {
+            font-weight: 900;
+          }
         }
       }
     }
@@ -44,6 +53,10 @@
     background-color: white;
     position: fixed;
     bottom: 0px;
+    z-index: 1111;
+    .pc-content & {
+      position: absolute;
+    }
     p {
       flex: 1;
       padding: 0.45rem 0px;
@@ -62,4 +75,5 @@
     }
   }
 }
+
 
