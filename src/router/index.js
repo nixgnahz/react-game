@@ -68,4 +68,4 @@ class TabBar extends React.Component {
     }
 }
 
-export default TabBar;
+export default TabBar

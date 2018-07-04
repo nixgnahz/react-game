@@ -1,4 +1,4 @@
-import React from  'react';
+import React from  'react'
 
 import Label from '../baseComponent/Label'
 import Line from './Line'
