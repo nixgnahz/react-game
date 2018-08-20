@@ -79,7 +79,7 @@ class Task extends React.Component {
                         tasks.map((item)=>
                             <li key={item.id}>
                                 <p className="icon-box">
-                                    <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/5/e/3/f/5acad3e16db04.png" alt=""/>
+                                    <img src="http://wx.11babay.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/5/e/3/f/5acad3e16db04.png" alt=""/>
                                 </p>
                                 <div className="column">
                                     <p className="title">{item.title}<SetLabels value={item}/></p>

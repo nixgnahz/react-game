@@ -17,13 +17,13 @@ class SignIn extends React.Component {
         </p>
         <div class="loginBody">
           <p>
-            <img src="http://wx.wpart.cn/uploads/k/kJF5b1dFFKGcmTyvm5qv/4/2/9/9/5b0ce76087685.png" alt=""/>
+            <img src="http://wx.11babay.cn/uploads/k/kJF5b1dFFKGcmTyvm5qv/4/2/9/9/5b0ce76087685.png" alt=""/>
           </p>
           <p>
-            <img src="http://wx.wpart.cn/uploads/k/kJF5b1dFFKGcmTyvm5qv/0/e/3/8/5b0ce7500ae47.png" alt=""/>
+            <img src="http://wx.11babay.cn/uploads/k/kJF5b1dFFKGcmTyvm5qv/0/e/3/8/5b0ce7500ae47.png" alt=""/>
           </p>
           <p>
-            <img src="http://wx.wpart.cn/uploads/k/kJF5b1dFFKGcmTyvm5qv/f/e/0/0/5b0ce758d5ea2.png" alt=""/>
+            <img src="http://wx.11babay.cn/uploads/k/kJF5b1dFFKGcmTyvm5qv/f/e/0/0/5b0ce758d5ea2.png" alt=""/>
           </p>
         </div>
         <p class="loginTip">请选择登录方式</p>

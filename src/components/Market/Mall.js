@@ -131,7 +131,7 @@ function NoticeSwiper(props) {
                 {
                     notice.map((item)=>
                         <div className="swiper-slide" key={item.id}>
-                            <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/7/9/5/e/5b0b67e102e48.png" alt=""/>
+                            <img src="http://wx.11babay.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/7/9/5/e/5b0b67e102e48.png" alt=""/>
                             <span className="name">{item.title}</span>
                             <span className="desc">{item.desc}</span>
                         </div>

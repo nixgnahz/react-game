@@ -34,7 +34,7 @@ class Current extends React.Component {
             <div className="current-play">
                 <ul>
                     <li className="current-list">
-                        <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/c/e/f/6/5afe6ced404fc.png" className="icon" alt=""/>
+                        <img src="http://wx.11babay.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/c/e/f/6/5afe6ced404fc.png" className="icon" alt=""/>
                     </li>
                     {current_arr.map((item)=>
                         <li className="current-list" key={item.id}>

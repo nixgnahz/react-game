@@ -28,10 +28,10 @@ class RuleItem extends React.Component {
             <section>
                 {items.map((item)=>
                     <div className="rules-item" key={item.id}>
-                        <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/c/6/3/7/5b0690e1eca66.png" className="icon" alt=""/>
+                        <img src="http://wx.11babay.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/c/6/3/7/5b0690e1eca66.png" className="icon" alt=""/>
                         <p>{item.text}</p>
                         <Link to={url + '/' + item.path}>
-                            <img src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/7/4/2/5/5a619b23048ae.png" className="enter" alt=""/>
+                            <img src="http://wx.11babay.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/7/4/2/5/5a619b23048ae.png" className="enter" alt=""/>
                         </Link>
                     </div>
                 )}
